@@ -1,10 +1,10 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+Created on Sun Dec 6 19:33:02 2020
 
-# Form implementation generated from reading ui file 'main.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
+@author: Pronaya Prosun Das
+"""
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from train_interface_ import Ui_TrainWindow

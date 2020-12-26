@@ -4,11 +4,6 @@ Created on Wed Dec 15 12:52:53 2019
 
 @author: Pronaya Prosun Das
 """
-# Form implementation generated from reading ui file 'test_image_list.ui'
-#
-# Created using PyQt5 UI code generator 5.13.2
-#
-# WARNING! All changes made in this file will be lost!
 # Version 1.4: shortcut key added
 
 from PyQt5 import QtCore, QtGui, QtWidgets
