@@ -36,6 +36,7 @@ strArg = "/Home/ppd/works/Pig_Videos/Kamera-120170504-120223-1493892143_1slices/
 terminationFlag = 0
 rows_list_interaction = []
 
+# This parser function should be used in your script. This is designed to take parameters from Analyse and Track GUI. 
 def argParser(argStr):
         tmpStr = argStr.split("|")
         modelName = tmpStr[0].strip()

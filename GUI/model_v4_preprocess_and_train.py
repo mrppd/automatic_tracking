@@ -39,6 +39,7 @@ terminationFlag = 0
 def modelCall(sendStr):
     global terminationFlag
 
+    # This parser function should be used in your script. This is designed to take parameters from TrainWindow GUI. 
     def argParser(argStr):
         tmpStr = argStr.split("|")
         tmpMetaList = tmpStr[0].strip().split("<")

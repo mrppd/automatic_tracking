@@ -376,6 +376,8 @@ def analyseVideo(sendStr):
     print(sendStr)
 
     ### This is the place where you should call the tracker which resides on the back-end script.
+    ### sendStr contains all the given/selected parameter for the back-end script. Therefore, you have  
+    ### receive and parse it in your script. Use the parser function used in "model_v4_analyse_and_track.py"
     m4AT.main_func(sendStr)
     #del modelAE
 

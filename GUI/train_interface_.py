@@ -570,6 +570,8 @@ class FetchDataThread(QtCore.QThread):
         with redirect_stdout(out):
 
             ### This is the place where you should call your training function which resides on the back-end script.
+            ### self.sendStr contains all the given/selected parameter for the model. Therefore, you have  
+            ### receive and parse it in your script. Use the parser function used in "model_v4_preprocess_and_train.py"
             m4PT.modelCall(self.sendStr)
 
         #out.write('='*80 + '\n')
