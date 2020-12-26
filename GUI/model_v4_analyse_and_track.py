@@ -32,7 +32,7 @@ import threading as th
 
 import model_v4_common as m4c
 
-strArg = "/Home/ppd/works/Pig_Videos/Kamera-120170504-120223-1493892143_1slices/model_cross_mean_5ch_output_6all.pyc | /Home/ppd/works/Pig_Videos/Video_SocialInteraction/cam 5 ATW20181113-190716-1542132436.mp4 | /Home/ppd/works | 0 | 10 | 6.22756203 | 0"
+#strArg = "/Home/ppd/works/Pig_Videos/Kamera-120170504-120223-1493892143_1slices/model_cross_mean_5ch_output_6all.pyc | /Home/ppd/works/Pig_Videos/Video_SocialInteraction/cam 5 ATW20181113-190716-1542132436.mp4 | /Home/ppd/works | 0 | 10 | 6.22756203 | 0"
 terminationFlag = 0
 rows_list_interaction = []
 
