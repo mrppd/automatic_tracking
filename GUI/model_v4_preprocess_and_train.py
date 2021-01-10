@@ -109,11 +109,11 @@ def modelCall(sendStr):
     metadata = metaDataList
     metadata = pd.concat(metadata).reset_index(drop=True)
 
-    metadata = metadata[(metadata.p1 != "-1,-1") & (metadata.p2 != "-1,-1" ) & (metadata.p3 != "-1,-1" ) & (metadata.p4 != "-1,-1" )]
-    metadata['p1SX'], metadata['p1SY'] = metadata.p1.str.split(',', 1).str
-    metadata['p2SX'], metadata['p2SY'] = metadata.p2.str.split(',', 1).str
-    metadata['p3SX'], metadata['p3SY'] = metadata.p3.str.split(',', 1).str
-    metadata['p4SX'], metadata['p4SY'] = metadata.p4.str.split(',', 1).str
+    metadata = metadata[(metadata.p1 != "-1:-1") & (metadata.p2 != "-1:-1" ) & (metadata.p3 != "-1:-1" ) & (metadata.p4 != "-1:-1" )]
+    metadata['p1SX'], metadata['p1SY'] = metadata.p1.str.split(':', 1).str
+    metadata['p2SX'], metadata['p2SY'] = metadata.p2.str.split(':', 1).str
+    metadata['p3SX'], metadata['p3SY'] = metadata.p3.str.split(':', 1).str
+    metadata['p4SX'], metadata['p4SY'] = metadata.p4.str.split(':', 1).str
 
     metadata['p1SX'] = pd.to_numeric(metadata['p1SX']) #* scale_percent / 100
     metadata['p1SY'] = pd.to_numeric(metadata['p1SY']) #* scale_percent / 100
@@ -149,7 +149,7 @@ def modelCall(sendStr):
     print("unique names sample: " + str(len(unique_file_names)) )
 
     ###
-    metadata_sample.get_group(unique_file_names[10])
+    #metadata_sample.get_group(unique_file_names[10])
 
 
     ###

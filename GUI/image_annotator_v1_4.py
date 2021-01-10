@@ -248,10 +248,10 @@ class Ui_AnnotationWindow(object):
                 self.listImages.setEnabled(True)
                 
                 coordsDict = {'baseFolderName': self.baseFolderName, 'fileName': self.listImages.currentItem().text(),
-                              'p1': str(self.xCoords[0])+","+str(self.yCoords[0]),
-                              'p2': str(self.xCoords[1])+","+str(self.yCoords[1]),
-                              'p3': str(self.xCoords[2])+","+str(self.yCoords[2]),
-                              'p4': str(self.xCoords[3])+","+str(self.yCoords[3])
+                              'p1': str(self.xCoords[0])+":"+str(self.yCoords[0]),
+                              'p2': str(self.xCoords[1])+":"+str(self.yCoords[1]),
+                              'p3': str(self.xCoords[2])+":"+str(self.yCoords[2]),
+                              'p4': str(self.xCoords[3])+":"+str(self.yCoords[3])
                               }
                 self.dfCoordsStorage = self.dfCoordsStorage.append(coordsDict, ignore_index=True)
                 #self.dfCoordsStorage.to_csv(self.filePath)
@@ -294,10 +294,10 @@ class Ui_AnnotationWindow(object):
                 self.listImages.setEnabled(True)
                 
                 coordsDict = {'baseFolderName': self.baseFolderName, 'fileName': self.listImages.currentItem().text(),
-                              'p1': str(self.xCoords[0])+","+str(self.yCoords[0]),
-                              'p2': str(self.xCoords[1])+","+str(self.yCoords[1]),
-                              'p3': str(self.xCoords[2])+","+str(self.yCoords[2]),
-                              'p4': str(self.xCoords[3])+","+str(self.yCoords[3])
+                              'p1': str(self.xCoords[0])+":"+str(self.yCoords[0]),
+                              'p2': str(self.xCoords[1])+":"+str(self.yCoords[1]),
+                              'p3': str(self.xCoords[2])+":"+str(self.yCoords[2]),
+                              'p4': str(self.xCoords[3])+":"+str(self.yCoords[3])
                               }
                 self.dfCoordsStorage = self.dfCoordsStorage.append(coordsDict, ignore_index=True)
                 #self.dfCoordsStorage.to_csv(self.filePath)
@@ -320,7 +320,7 @@ class Ui_AnnotationWindow(object):
             self.listImages.setEnabled(True)
             
     def saveEntries(self):
-        self.dfCoordsStorage.to_csv(self.filePath+"Annotation.csv", sep=";", index=False)
+        self.dfCoordsStorage.to_csv(self.filePath+"Annotation.csv", sep=",", index=False)
         print(self.dfCoordsStorage.head())
         print("Unique Images: ", len(self.dfCoordsStorage.fileName.unique()))
         print("Entries saved!")
@@ -412,7 +412,7 @@ class Ui_AnnotationWindow(object):
                     painter.setBrush(QtGui.QBrush(QtCore.Qt.blue, QtCore.Qt.SolidPattern))
                 else:
                     painter.setBrush(QtGui.QBrush(QtCore.Qt.darkRed, QtCore.Qt.SolidPattern))
-                x1, y1 = str(self.ptsTable.item(ind, col).text()).split(',')
+                x1, y1 = str(self.ptsTable.item(ind, col).text()).split(':')
                 painter.drawEllipse(QtCore.QPointF(int(x1), int(y1)), radW, radH)
         #painter = QtGui.QPainter(self)  
         #painter.drawPixmap(self.rect(), self._image)
