@@ -9,7 +9,7 @@ Created on Sun Dec 6 19:33:02 2020
 from PyQt5 import QtCore, QtGui, QtWidgets
 from train_interface_ import Ui_TrainWindow
 from analyse_ import Ui_AnalyseWindow
-from image_annotator_v1_4 import Ui_AnnotationWindow, Window
+from image_annotator_v1_5 import Ui_AnnotationWindow, Window
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
